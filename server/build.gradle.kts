@@ -24,6 +24,12 @@ dependencies {
 	implementation("org.liquibase:liquibase-core")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("junit:junit:4.12")
+	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.4.32")
+}
+
+tasks.test {
+	useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
